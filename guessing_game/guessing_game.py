@@ -25,7 +25,7 @@ class GuessingGame:
     def getSecretNumber(self):
         return self._secret_number
 
-    def getWinStatus(self):
+    def gameIsWon(self):
         return self._win
 
     def submitGuess(self, guess):
@@ -57,7 +57,7 @@ def game():
     game = GuessingGame(1, 10)
     print("Game is starting...")
 
-    while (not game.getWinStatus()):
+    while (not game.gameIsWon()):
 
         guess = int(input("Submit a guess: "))
 
